@@ -10,7 +10,7 @@ import {
   useColorModeValue,
   Image
 } from '@chakra-ui/react';
-
+import F6 from "../assets/images/F6.png"
 const Logo = (props) => {
   return (
     <svg height={32} viewBox="0 0 120 28" xmlns="http://www.w3.org/2000/svg" {...props}>
@@ -31,9 +31,10 @@ export default function Footer() {
   return (
     <Box
       bg="black"
-      color="white">
+      color="white"
+      fontFamily="Poppins">
       <Container as={Stack} maxW={'6xl'} py={10}>
-        <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
+        <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} m="auto" spacing={{ base: 10, sm: 100, md: 150 }}>
           <Stack align={'flex-start'}>
 
             <ListHeader>Product</ListHeader>
@@ -135,7 +136,7 @@ export default function Footer() {
             flexGrow: 1,
             ml: 8,
           }}>
-         <Image w="190px" src="../assests/images/6.png" />
+         <Image w="190px" src={F6} />
         </Flex>
         <Text pt={6} fontSize={'sm'} textAlign={'center'}>
           © 2022 Chakra Templates. All rights reserved

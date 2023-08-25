@@ -20,7 +20,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
 
-
+import F6 from "../assets/images/F6.png"
 
 export default function Navbar(){
   const bg = useColorModeValue("black", "gray");
@@ -30,14 +30,16 @@ const Navigate=useNavigate();
     <React.Fragment>
       <chakra.header
         bg="black"
+   
+
         w="full"
         px={{ base: 2, sm: 4 }}
         py={4}
         shadow="md"
       >
-        <Flex alignItems="center" justifyContent="space-around" mx="auto" fontFamily="Poppins">
+        <Flex alignItems="center" justifyContent="space-around" mx="auto" fontFamily="Urbanist">
           <Flex>
-             <Image w="190px" src="../assests/images/6.png" />
+             <Image w="190px" src={F6} />
    
           </Flex>
           <HStack display="flex"  alignItems="center" justifyContent="space-evenly">

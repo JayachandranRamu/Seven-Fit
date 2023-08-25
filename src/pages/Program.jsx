@@ -1,11 +1,11 @@
 import React from 'react'
+import Explore from '../components/Explore'
 
 const Program = () => {
   return (
-    <div>Program
-<h1>Hey</h1>
-        fgfgfg
-    </div>
+    <>
+  <Explore />
+    </>
   )
 }
 
