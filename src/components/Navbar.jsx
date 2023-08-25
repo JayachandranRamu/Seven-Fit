@@ -23,7 +23,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import F6 from "../assets/images/F6.png"
 
 export default function Navbar(){
-  const bg = useColorModeValue("black", "gray");
+  const bg = useColorModeValue("black", "black");
   const mobileNav = useDisclosure();
 const Navigate=useNavigate();
   return (
@@ -37,7 +37,7 @@ const Navigate=useNavigate();
         py={4}
         shadow="md"
       >
-        <Flex alignItems="center" justifyContent="space-around" mx="auto" fontFamily="Urbanist">
+        <Flex alignItems="center" justifyContent="space-around" mx="auto" fontFamily="poppins">
           <Flex>
              <Image w="190px" src={F6} />
    
@@ -119,7 +119,7 @@ const Navigate=useNavigate();
                 pb={4}
                 m={2}
                 bg={bg}
-               
+               border="2px solid white"
                 spacing={3}
                 rounded="m"
                 shadow="sm"
@@ -130,16 +130,16 @@ const Navigate=useNavigate();
                   color="white"
                 />
 
-                <Button  color="white" w="full" variant='ghost'>
+                <Button  color="white" w="full" variant='ghost' onClick={(e)=>{Navigate("/")}}>
                  Home
                 </Button>
-                <Button w="full"  color="white" variant="ghost">
+                <Button w="full"  color="white" variant="ghost" onClick={(e)=>{Navigate("/program")}}>
                   Program
                 </Button>
-                <Button w="full"  color="white" variant="ghost">
+                <Button w="full"  color="white" variant="ghost" onClick={(e)=>{Navigate("/pricing")}}>
                   Pricing
                 </Button>
-                <Button w="full"  color="white" variant="ghost">
+                <Button w="full"  color="white" variant="ghost" onClick={(e)=>{Navigate("/community")}}>
                   Community
                 </Button>
                 <Button w="full"   color="white" variant="ghost">
