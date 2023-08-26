@@ -45,8 +45,10 @@ export default function Navbar() {
   return (
     <>
     <Box bg={"black"}>
-      <Button m={5} color={"black"} colorScheme='black' position={"fixed"}>
-   <Image mt={10} ref={btnRef} onClick={onOpen}  src={Ham} w={"45px"}/>
+      <Button m={5} color={"black"} colorScheme='black' >
+   <Image mt={10} ref={btnRef}
+    onClick={onOpen} 
+    src={Ham} w={"45px"} />
       </Button>
       <Box  bg="black">
       <Drawer
@@ -77,7 +79,9 @@ export default function Navbar() {
             >
       <Button colorScheme={"white"} color={"white"} variant='ghost'
     fontWeight="500"
-                onClick={(e)=>{ onClose() ;Navigate("/")}}
+                onClick={(e)=>{ 
+                  onClose() ;
+                  Navigate("/")}}
                 _hover={{
                   color: "#097FD9",
              }}
@@ -87,7 +91,8 @@ export default function Navbar() {
               
               <Button colorScheme={bg} color={"white"} variant='ghost'
          fontWeight="500"
-                onClick={(e)=>{ onClose() ;Navigate("/program")}}
+                onClick={(e)=>{
+                   onClose() ;Navigate("/program")}}
                 _hover={{
                   color: "#097FD9",
              }}

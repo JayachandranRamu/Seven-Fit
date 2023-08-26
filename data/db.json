@@ -43,7 +43,7 @@
         "difficulty": "beginner",
         "focus": ["flexibility", "mindfulness"],
         "equipment": ["yoga mat"],
-        "location": "Mind-Body Studio",
+        "location": "Mind Studio",
         "classSize": 15,
         "registeredParticipants": 10,
         "exercises": [
@@ -232,7 +232,7 @@
         "difficulty": "beginner",
         "focus": ["flexibility"],
         "equipment": ["yoga mat"],
-        "location": "Mind-Body Studio",
+        "location": "Body Studio",
         "classSize": 15,
         "registeredParticipants": 12,
         "exercises": [
@@ -263,7 +263,7 @@
         "difficulty": "intermediate",
         "focus": ["functional", "strength"],
         "equipment": ["kettlebell", "medicine ball"],
-        "location": "Functional Training Area",
+        "location": "Ring Area",
         "classSize": 12,
         "registeredParticipants": 10,
         "exercises": [
@@ -315,7 +315,7 @@
         "difficulty": "beginner",
         "focus": ["flexibility"],
         "equipment": ["yoga mat"],
-        "location": "Mind-Body Studio",
+        "location": "Body Studio",
         "classSize": 15,
         "registeredParticipants": 10,
         "exercises": [
@@ -348,7 +348,7 @@
       "difficulty": "beginner",
       "focus": ["mindfulness"],
       "equipment": ["cushion", "blanket"],
-      "location": "Mind-Body Studio",
+      "location": "Body Studio",
       "classSize": 15,
       "registeredParticipants": 10,
       "exercises": [
