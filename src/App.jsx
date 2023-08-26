@@ -10,7 +10,7 @@ function App() {
     <>
     <Navbar/>
 <AllRoute />
-<Footer />
+{/* <Footer /> */}
 </>
   )
 }

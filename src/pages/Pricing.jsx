@@ -14,7 +14,7 @@ import {
   Button,
 } from '@chakra-ui/react'
 import { FaCheckCircle } from 'react-icons/fa'
-import { Fade } from 'react-awesome-reveal'
+import { Fade ,Slide} from 'react-awesome-reveal'
 
 
 function PriceWrapper(props) {
@@ -37,9 +37,9 @@ function PriceWrapper(props) {
 export default function Pricing() {
   return (
     <Box   bgColor={"black"} color={"white"} fontFamily={"Poppins"}>
-
-      <Heading fontFamily="urbanist" textAlign={"center"} p={"60px"}  fontSize={"56"}>Our List Packages</Heading>
- 
+ <Slide direction="down" triggerOnce>
+      <Heading fontFamily="urbanist" textAlign={"center"} pb={"60px"} mt={0} pt={0}  fontSize={"56"}>Our List Packages</Heading>
+      </Slide>
       <Stack
         direction={{ base: 'column', md: 'row' }}
         textAlign="center"
@@ -47,7 +47,10 @@ export default function Pricing() {
    
         spacing={{ base: 4, lg: 10 }}
         >
-          <Fade cascade damping={0.65}>
+          <Fade cascade damping={0.65} triggerOnce>
+            <Box>
+
+            </Box>
         <PriceWrapper bgColor={'#0D0D0D'}>
           <Box py={4} px={12} bgColor={'#0D0D0D'} borderTopLeftRadius={`xl`} borderTopRightRadius={`xl`}>
             <Text fontWeight="500" textAlign={"left"} fontFamily="Poppins" fontSize="2xl">

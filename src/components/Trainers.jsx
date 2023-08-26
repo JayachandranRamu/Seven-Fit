@@ -11,7 +11,7 @@ import T3 from "../assets/images/T3.webp"
 import T4 from "../assets/images/T4.webp"
 import T5 from "../assets/images/T5.webp"
 
-
+import './Trainers.css'
 
 import { EffectCards } from 'swiper/modules';
 
