@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { Tabs, TabList, TabPanels, Tab, TabPanel,TabIndicator, SimpleGrid } from '@chakra-ui/react'
 import { IconName } from "react-icons/bi";
 import { TimeIcon } from '@chakra-ui/icons'
-
+import { Fade,Slide } from "react-awesome-reveal";
 
 import {
     Center,
@@ -71,9 +71,11 @@ setLoading(true)
       bg="blue.500"
       borderRadius="1px"
     />
+   
   <TabPanels>
 
     <TabPanel>
+
         {loading?<>
         <Center>
             <VStack>
@@ -274,7 +276,431 @@ setLoading(true)
           rounded="lg"
 variant={"solid"}
         >
-          Start Now
+          Book Now
+        </Button>
+      </Box>
+    </Box>
+  </Box>
+</Flex>
+            </>
+        })}
+  
+    </TabPanel>
+    <TabPanel>
+
+{loading?<>
+<Center>
+    <VStack>
+<VStack mt={10}>
+<Flex>
+<Center>
+<SkeletonCircle size='250' borderRadius={20} w={500}/>
+</Center>
+<Center>
+<VStack>
+<Skeleton height='15px' w={400} ml={5}  />
+<Skeleton height='15px' w={400} ml={5} mt={5} />
+
+<Skeleton height='15px' w={400} ml={5} mt={5} />
+<Skeleton height='15px' w={400} ml={5} mt={5} />
+<Skeleton height='15px' w={400} ml={5} mt={5} />
+
+</VStack>
+</Center>
+</Flex>
+
+</VStack>
+<VStack mt={10}>
+<Flex>
+<Center>
+<SkeletonCircle size='250' borderRadius={20} w={500}/>
+</Center>
+<Center>
+<VStack>
+<Skeleton height='15px' w={400} ml={5}  />
+<Skeleton height='15px' w={400} ml={5} mt={5} />
+
+<Skeleton height='15px' w={400} ml={5} mt={5} />
+<Skeleton height='15px' w={400} ml={5} mt={5} />
+<Skeleton height='15px' w={400} ml={5} mt={5} />
+
+</VStack>
+</Center>
+</Flex>
+
+</VStack>
+</VStack>
+</Center>
+</>:
+data.map(el=>{
+    return <>
+    {/* <Flex>
+        <Box>
+            <Image src={el.img}/>
+        </Box>
+<Box>
+<Text>{el.time}</Text>
+<Text>{el.name}</Text>
+
+</Box>
+<Box>
+<Text>{el.trainerName}</Text>
+<Text>{el.duration}</Text>
+<Text>{el.location}</Text>
+</Box>
+</Flex> */}
+<Flex
+bg="black"
+
+pt={10}
+w="full"
+alignItems="center"
+justifyContent="center"
+
+>
+<Box
+bg="black"
+_dark={{
+bg: "gray.800",
+}}
+mx={{
+lg: 8,
+}}
+display={{
+lg: "flex",
+}}
+maxW={{
+lg: "5xl",
+}}
+shadow={{
+lg: "lg",
+}}
+rounded={{
+lg: "lg",
+}}
+>
+<Box
+w={{
+lg: "50%",
+}}
+>
+<Box
+h={{
+  base: 64,
+  lg: "full",
+}}
+// rounded={{
+//   lg: "lg",
+// }}
+rounded={{base:"lg",lg:0}}
+roundedTopLeft={ {base:"lg",lg:"20px"}}
+roundedBottomLeft={{base:"lg",lg:"20px"}}
+bgSize="cover"
+style={{
+  backgroundImage:
+    `url(${el.img})`,
+}}
+></Box>
+</Box>
+
+<Box
+py={12}
+px={6}
+borderRadius={{base:"lg",lg:0}}
+borderTopRightRadius={ {base:"lg",lg:"20px"}}
+borderBottomRightRadius={{base:"lg",lg:"20px"}}
+bg={"#0D0D0D"}
+maxW={{
+base: "xl",
+lg: "5xl",
+}}
+
+w={{
+lg: "50%",
+}}
+>
+<chakra.h2
+fontSize={{
+  base: "2xl",
+  md: "3xl",
+}}
+color="white"
+
+fontWeight="bold"
+>
+{el.name}{" "}
+<chakra.span
+  color="brand.600"
+  _dark={{
+    color: "brand.400",
+  }}
+>
+
+</chakra.span>
+</chakra.h2>
+<SimpleGrid columns={3} mt={4}>
+<Flex >
+   
+    <BiTimeFive size={18} mt={0}/>
+
+    <Center>
+    <Text ml={1.5} mt={"-2.012px"}>{el.time}</Text>
+    </Center>
+
+</Flex>
+
+<Flex >
+   
+   <BiUserPin size={18} mt={0}/>
+
+   <Center>
+   <Text ml={1.5} mt={"-2.012px"}>{el.trainerName}</Text>
+   </Center>
+
+</Flex>
+<Flex >
+   
+   <IoLocationOutline size={18} mt={0}/>
+
+   <Center>
+   <Text ml={1.5} mt={"-2.012px"}>{el.location}</Text>
+   </Center>
+
+</Flex>
+</SimpleGrid>
+
+<chakra.h4
+mt={4}
+color="white"
+
+>
+Begin your mornings by engaging in a Pilates session, focusing on enhancing core strength and boosting flexibility for overall wellness.
+</chakra.h4>
+
+<Box mt={8}>
+<Button
+  bg="#097fd9"
+  color="white"
+  px={5}
+  py={3}
+  colorScheme='#097fd9'
+  fontWeight="semibold"
+  rounded="lg"
+variant={"solid"}
+>
+  Book Now
+</Button>
+</Box>
+</Box>
+</Box>
+</Flex>
+    </>
+})}
+
+</TabPanel>
+    <TabPanel>
+    
+        {loading?<>
+        <Center>
+            <VStack>
+        <VStack mt={10}>
+        <Flex>
+<Center>
+  <SkeletonCircle size='250' borderRadius={20} w={500}/>
+  </Center>
+  <Center>
+  <VStack>
+  <Skeleton height='15px' w={400} ml={5}  />
+   <Skeleton height='15px' w={400} ml={5} mt={5} />
+  
+   <Skeleton height='15px' w={400} ml={5} mt={5} />
+   <Skeleton height='15px' w={400} ml={5} mt={5} />
+  <Skeleton height='15px' w={400} ml={5} mt={5} />
+
+  </VStack>
+    </Center>
+</Flex>
+
+</VStack>
+<VStack mt={10}>
+        <Flex>
+<Center>
+  <SkeletonCircle size='250' borderRadius={20} w={500}/>
+  </Center>
+  <Center>
+  <VStack>
+  <Skeleton height='15px' w={400} ml={5}  />
+   <Skeleton height='15px' w={400} ml={5} mt={5} />
+  
+   <Skeleton height='15px' w={400} ml={5} mt={5} />
+   <Skeleton height='15px' w={400} ml={5} mt={5} />
+  <Skeleton height='15px' w={400} ml={5} mt={5} />
+
+  </VStack>
+    </Center>
+</Flex>
+
+</VStack>
+</VStack>
+</Center>
+</>:
+        data.map(el=>{
+            return <>
+            {/* <Flex>
+                <Box>
+                    <Image src={el.img}/>
+                </Box>
+    <Box>
+        <Text>{el.time}</Text>
+<Text>{el.name}</Text>
+
+    </Box>
+    <Box>
+<Text>{el.trainerName}</Text>
+<Text>{el.duration}</Text>
+<Text>{el.location}</Text>
+    </Box>
+</Flex> */}
+<Flex
+  bg="black"
+
+  pt={10}
+  w="full"
+  alignItems="center"
+  justifyContent="center"
+
+>
+  <Box
+    bg="black"
+    _dark={{
+      bg: "gray.800",
+    }}
+    mx={{
+      lg: 8,
+    }}
+    display={{
+      lg: "flex",
+    }}
+    maxW={{
+      lg: "5xl",
+    }}
+    shadow={{
+      lg: "lg",
+    }}
+    rounded={{
+      lg: "lg",
+    }}
+  >
+    <Box
+      w={{
+        lg: "50%",
+      }}
+    >
+      <Box
+        h={{
+          base: 64,
+          lg: "full",
+        }}
+        // rounded={{
+        //   lg: "lg",
+        // }}
+        rounded={{base:"lg",lg:0}}
+ roundedTopLeft={ {base:"lg",lg:"20px"}}
+ roundedBottomLeft={{base:"lg",lg:"20px"}}
+        bgSize="cover"
+        style={{
+          backgroundImage:
+            `url(${el.img})`,
+        }}
+      ></Box>
+    </Box>
+
+    <Box
+      py={12}
+      px={6}
+      borderRadius={{base:"lg",lg:0}}
+    borderTopRightRadius={ {base:"lg",lg:"20px"}}
+      borderBottomRightRadius={{base:"lg",lg:"20px"}}
+      bg={"#0D0D0D"}
+      maxW={{
+        base: "xl",
+        lg: "5xl",
+      }}
+      
+      w={{
+        lg: "50%",
+      }}
+    >
+      <chakra.h2
+        fontSize={{
+          base: "2xl",
+          md: "3xl",
+        }}
+        color="white"
+      
+        fontWeight="bold"
+      >
+        {el.name}{" "}
+        <chakra.span
+          color="brand.600"
+          _dark={{
+            color: "brand.400",
+          }}
+        >
+        
+        </chakra.span>
+      </chakra.h2>
+      <SimpleGrid columns={3} mt={4}>
+        <Flex >
+           
+            <BiTimeFive size={18} mt={0}/>
+    
+            <Center>
+            <Text ml={1.5} mt={"-2.012px"}>{el.time}</Text>
+            </Center>
+       
+        </Flex>
+      
+        <Flex >
+           
+           <BiUserPin size={18} mt={0}/>
+   
+           <Center>
+           <Text ml={1.5} mt={"-2.012px"}>{el.trainerName}</Text>
+           </Center>
+      
+       </Flex>
+       <Flex >
+           
+           <IoLocationOutline size={18} mt={0}/>
+   
+           <Center>
+           <Text ml={1.5} mt={"-2.012px"}>{el.location}</Text>
+           </Center>
+      
+       </Flex>
+      </SimpleGrid>
+     
+      <chakra.h4
+        mt={4}
+        color="white"
+ 
+      >
+    Begin your mornings by engaging in a Pilates session, focusing on enhancing core strength and boosting flexibility for overall wellness.
+      </chakra.h4>
+
+      <Box mt={8}>
+        <Button
+          bg="#097fd9"
+          color="white"
+          px={5}
+          py={3}
+          colorScheme='#097fd9'
+          fontWeight="semibold"
+          rounded="lg"
+variant={"solid"}
+        >
+          Book Now
         </Button>
       </Box>
     </Box>
@@ -286,6 +712,7 @@ variant={"solid"}
     </TabPanel>
     
   </TabPanels>
+
 </Tabs>
 </Box>
   
