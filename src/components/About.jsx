@@ -6,7 +6,7 @@ const About = () => {
   return (
    <>
    <Box  fontFamily="urbanist" bg="black" color={"white"}>
-<Heading fontFamily="urbanist" textAlign={"center"} p={"60px"} fontSize={"56"}>About Us</Heading>
+<Heading fontFamily="urbanist" textAlign={"center"}  fontSize={"56"} pb={"60px"} mt={0} pt={0} >About Us</Heading>
 </Box>
    </>
     

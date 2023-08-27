@@ -16,9 +16,9 @@ const Community = () => {
     <>
     <Box bg={"black"}>
 
-    
-    <About />
     <Slide direction="up" triggerOnce>
+    <About />
+
     <Flex flexWrap={{base:"wrap",md:"nowrap"}} w={"100%"}>
     <Card img={A1} name="LUXURY ATMOSPHERE" des="We redefine your perfection of a gym"/> 
     <Card img={A2} name="A CROWD-FREE GYM" des="Get ready for the ultimate transformation"/> 

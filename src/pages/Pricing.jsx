@@ -14,9 +14,10 @@ import {
   Button,
 } from '@chakra-ui/react'
 import { FaCheckCircle } from 'react-icons/fa'
-import { Fade } from 'react-awesome-reveal'
-
-
+import { Fade ,Slide} from 'react-awesome-reveal'
+import { useNavigate } from 'react-router-dom'
+import { AuthContext } from '../route/AuthContext';
+import { useContext } from 'react';
 function PriceWrapper(props) {
   const { children } = props
 
@@ -35,19 +36,25 @@ function PriceWrapper(props) {
 }
 
 export default function Pricing() {
+  let Navigate=useNavigate()
+  let {status}=useContext(AuthContext)
   return (
     <Box   bgColor={"black"} color={"white"} fontFamily={"Poppins"}>
-
-      <Heading fontFamily="urbanist" textAlign={"center"} p={"60px"}  fontSize={"56"}>Our List Packages</Heading>
- 
+ <Slide direction="down" triggerOnce>
+      <Heading fontFamily="urbanist" textAlign={"center"} pb={"60px"} mt={0} pt={0}  fontSize={"56"}>Our List Packages</Heading>
+      </Slide>
       <Stack
         direction={{ base: 'column', md: 'row' }}
         textAlign="center"
         justify="center"
-   
-        spacing={{ base: 4, lg: 10 }}
+   w={{base:"80%",md:"100%"}}
+   m={"auto"}
+        spacing={{ base: 7, lg: 10 }}
         >
-          <Fade cascade damping={0.65}>
+          <Fade cascade damping={0.65} triggerOnce>
+            <Box>
+
+            </Box>
         <PriceWrapper bgColor={'#0D0D0D'}>
           <Box py={4} px={12} bgColor={'#0D0D0D'} borderTopLeftRadius={`xl`} borderTopRightRadius={`xl`}>
             <Text fontWeight="500" textAlign={"left"} fontFamily="Poppins" fontSize="2xl">
@@ -55,7 +62,7 @@ export default function Pricing() {
             </Text>
          
               <Text textAlign={"left"} fontSize={56} fontFamily="urbanist" fontWeight="500">
-                $79 
+                $39 
               </Text>
         
               
@@ -94,8 +101,14 @@ export default function Pricing() {
               
             </List>
             <Box w="80%" pt={7}>
-              <Button w="full"  bg={"#097FD9"} colorScheme='blue' color={"color"} variant={"solid"} fontSize={16} fontWeight={500} >
-               Register Now
+              <Button w="full"  bg={"#097FD9"} colorScheme='blue' color={"color"} variant={"solid"} fontSize={16} fontWeight={500} 
+              onClick={()=>
+                {status?
+                Navigate("/payment"):Navigate("/login")
+                }
+              }
+              >
+               Buy Now
               </Button>
             </Box>
           </VStack>
@@ -166,8 +179,12 @@ export default function Pricing() {
                 
               </List>
               <Box w="80%" pt={10} pb={5} >
-                <Button w="full" colorScheme="#0D0D0D" bg={"#0D0D0D"} fontSize={16} fontWeight={400}>
-                  Register Now
+                <Button     onClick={()=>
+                {status?
+                Navigate("/payment"):Navigate("/login")
+                }
+              } w="full" colorScheme="#0D0D0D" bg={"#0D0D0D"} fontSize={16} fontWeight={400}>
+                  Buy Now
                 </Button>
               </Box>
             </VStack>
@@ -219,8 +236,12 @@ export default function Pricing() {
               
             </List>
             <Box w="80%" pt={7}>
-              <Button w="full"  bg={"#097FD9"} colorScheme='blue' color={"color"} variant={"solid"} fontSize={16} fontWeight={500} >
-               Register Now
+              <Button     onClick={()=>
+                {status?
+                Navigate("/payment"):Navigate("/login")
+                }
+              } w="full"  bg={"#097FD9"} colorScheme='blue' color={"color"} variant={"solid"} fontSize={16} fontWeight={500} >
+               Buy Now
               </Button>
             </Box>
           </VStack>

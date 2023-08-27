@@ -1,0 +1,480 @@
+{
+  "workouts": [
+    {
+      "id": 1,
+      "name": "Morning Pilates",
+      "description": "Start your day with a Pilates workout for core strength and flexibility.",
+      "time": "07:30 AM",
+      "railway": "07:00",
+      "img": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ls0grfl2ll7kp94o0pe6.jpg",
+      "trainerName": "Sophia Turner",
+      "duration": "45 minutes",
+      "difficulty": "beginner",
+      "focus": [
+        "core",
+        "flexibility"
+      ],
+      "equipment": [
+        "pilates mat",
+        "resistance band"
+      ],
+      "location": "Studio A",
+      "classSize": 15,
+      "registeredParticipants": 10,
+      "exercises": [
+        {
+          "name": "Hundreds",
+          "sets": 3,
+          "reps": 15
+        },
+        {
+          "name": "Leg Circles",
+          "sets": 3,
+          "reps": 10
+        },
+        {
+          "name": "Rolling Like a Ball",
+          "sets": 3,
+          "reps": 8
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Morning Yoga",
+      "img": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ec29l133l25uw1n4jpr8.jpg",
+      "description": "A gentle morning yoga session to start your day.",
+      "time": "08:00 AM",
+      "railway": "08:00",
+      "trainerName": "Eva Torris",
+      "duration": "30 minutes",
+      "difficulty": "beginner",
+      "focus": [
+        "flexibility",
+        "mindfulness"
+      ],
+      "equipment": [
+        "yoga mat"
+      ],
+      "location": "Mind Studio",
+      "classSize": 15,
+      "registeredParticipants": 10,
+      "exercises": [
+        {
+          "name": "Sun Salutations",
+          "sets": 3,
+          "reps": 1
+        },
+        {
+          "name": "Cat-Cow Stretch",
+          "sets": 3,
+          "reps": 5
+        },
+        {
+          "name": "Seated Forward Fold",
+          "sets": 3,
+          "duration": "1 minute"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Morning Strength",
+      "img": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/f6ie1r2lm5mtgw0wlpj1.jpg",
+      "description": "Build strength and power with a morning weightlifting session.",
+      "time": "09:00 AM",
+      "railway": "09:00",
+      "trainerName": "Nova Fright",
+      "duration": "50 minutes",
+      "difficulty": "intermediate",
+      "focus": [
+        "strength"
+      ],
+      "equipment": [
+        "barbell",
+        "dumbbells"
+      ],
+      "location": "Main Gym Area",
+      "classSize": 12,
+      "registeredParticipants": 8,
+      "exercises": [
+        {
+          "name": "Squats",
+          "sets": 4,
+          "reps": 8
+        },
+        {
+          "name": "Bench Press",
+          "sets": 4,
+          "reps": 10
+        },
+        {
+          "name": "Bent Over Rows",
+          "sets": 3,
+          "reps": 8
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Lunchtime Circuit",
+      "img": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6u7mb36dpr5pd3fu05yd.jpg",
+      "description": "A quick circuit workout for a midday energy boost.",
+      "time": "11:00 AM",
+      "railway": "11:00",
+      "trainerName": "Alex Fox",
+      "duration": "20 minutes",
+      "difficulty": "intermediate",
+      "focus": [
+        "cardio",
+        "strength"
+      ],
+      "equipment": [
+        "dumbbells",
+        "mat"
+      ],
+      "location": "Main Gym Area",
+      "classSize": 12,
+      "registeredParticipants": 8,
+      "exercises": [
+        {
+          "name": "Jumping Jacks",
+          "sets": 3,
+          "reps": 20
+        },
+        {
+          "name": "Dumbbell Rows",
+          "sets": 3,
+          "reps": 12
+        },
+        {
+          "name": "High Knees",
+          "sets": 3,
+          "reps": 30
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Lunchtime Pilates",
+      "img": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/klwg5da7qw1n5acnns2l.jpg",
+      "description": "Strengthen your core and improve posture during your lunch break.",
+      "time": "12:30 PM",
+      "railway": "12:30",
+      "trainerName": "Emily Wills",
+      "duration": "40 minutes",
+      "difficulty": "intermediate",
+      "focus": [
+        "core",
+        "posture"
+      ],
+      "equipment": [
+        "pilates mat",
+        "resistance band"
+      ],
+      "location": "Studio A",
+      "classSize": 15,
+      "registeredParticipants": 12,
+      "exercises": [
+        {
+          "name": "Hundreds",
+          "sets": 3,
+          "reps": 15
+        },
+        {
+          "name": "Swan Dive",
+          "sets": 3,
+          "reps": 10
+        },
+        {
+          "name": "Side Planks",
+          "sets": 3,
+          "duration": "30 seconds per side"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Midday Core Challenge",
+      "img": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nl2j6axlg7qwo202kuy5.jpg",
+      "description": "A quick core-focused workout during your lunch break.",
+      "time": "1:00 PM",
+      "railway": "13:00",
+      "trainerName": "Adam Cole",
+      "duration": "20 minutes",
+      "difficulty": "intermediate",
+      "focus": [
+        "core",
+        "strength"
+      ],
+      "equipment": [
+        "mat"
+      ],
+      "location": "Main Gym Area",
+      "classSize": 12,
+      "registeredParticipants": 8,
+      "exercises": [
+        {
+          "name": "Plank",
+          "sets": 3,
+          "duration": "45 seconds"
+        },
+        {
+          "name": "Russian Twists",
+          "sets": 3,
+          "reps": 20
+        },
+        {
+          "name": "Leg Raises",
+          "sets": 3,
+          "reps": 12
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Afternoon Cycling",
+      "img": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/je2r0xbwl71zuw7627j5.jpg",
+      "description": "Enjoy an energetic indoor cycling session in the afternoon.",
+      "time": "03:00 PM",
+      "railway": "15:00",
+      "trainerName": "Jake Paul",
+      "duration": "50 minutes",
+      "difficulty": "intermediate",
+      "focus": [
+        "cardio"
+      ],
+      "equipment": [
+        "stationary bike"
+      ],
+      "location": "Cycling Studio",
+      "classSize": 20,
+      "registeredParticipants": 18,
+      "exercises": [
+        {
+          "name": "Interval Sprints",
+          "sets": 8,
+          "duration": "1 minute"
+        },
+        {
+          "name": "Seated Climbs",
+          "sets": 3,
+          "duration": "2 minutes"
+        },
+        {
+          "name": "Recovery",
+          "sets": 3,
+          "duration": "1 minute"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Afternoon Stretch",
+      "img": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/azyzvnn8sj7sslfnccdt.jpg",
+      "description": "A series of stretches to relieve tension and improve flexibility.",
+      "time": "04:00 PM",
+      "railway": "16:00",
+      "trainerName": "Becky Lynch",
+      "duration": "25 minutes",
+      "difficulty": "beginner",
+      "focus": [
+        "flexibility"
+      ],
+      "equipment": [
+        "yoga mat"
+      ],
+      "location": "Body Studio",
+      "classSize": 15,
+      "registeredParticipants": 12,
+      "exercises": [
+        {
+          "name": "Neck Stretches",
+          "sets": 2,
+          "duration": "30 seconds per side"
+        },
+        {
+          "name": "Hamstring Stretch",
+          "sets": 2,
+          "duration": "1 minute per side"
+        },
+        {
+          "name": "Spinal Twist",
+          "sets": 2,
+          "duration": "45 seconds per side"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Functional Fitness",
+      "img": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d4ozr2dakzp2gpmvyihf.jpg",
+      "description": "A dynamic workout focusing on functional movements.",
+      "time": "5:00 PM",
+      "railway": "17:00",
+      "trainerName": "Jey Uso",
+      "duration": "50 minutes",
+      "difficulty": "intermediate",
+      "focus": [
+        "functional",
+        "strength"
+      ],
+      "equipment": [
+        "kettlebell",
+        "medicine ball"
+      ],
+      "location": "Ring Area",
+      "classSize": 12,
+      "registeredParticipants": 10,
+      "exercises": [
+        {
+          "name": "Kettlebell Swings",
+          "sets": 4,
+          "reps": 12
+        },
+        {
+          "name": "Medicine Ball Slams",
+          "sets": 3,
+          "reps": 15
+        },
+        {
+          "name": "Plank Rows",
+          "sets": 4,
+          "reps": 10
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Evening Zumba",
+      "img": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/gvxv38yn62zltlq5z9fj.jpg",
+      "description": "Dance your way to fitness with a high-energy Zumba class.",
+      "time": "06:00 PM",
+      "railway": "18:00",
+      "trainerName": "Austin Theory",
+      "duration": "60 minutes",
+      "difficulty": "intermediate",
+      "focus": [
+        "cardio"
+      ],
+      "equipment": [
+        "comfortable shoes"
+      ],
+      "location": "Studio B",
+      "classSize": 20,
+      "registeredParticipants": 18,
+      "exercises": [
+        {
+          "name": "Zumba Dance Routine",
+          "sets": 10,
+          "duration": "4 minutes"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Nighttime Stretch",
+      "description": "Relieve tension and improve flexibility with a nighttime stretching session.",
+      "img": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tmt3r08f77ew9q6inc74.jpg",
+      "time": "07:00 PM",
+      "railway": "19:00",
+      "trainerName": "Liv Morgan",
+      "duration": "30 minutes",
+      "difficulty": "beginner",
+      "focus": [
+        "flexibility"
+      ],
+      "equipment": [
+        "yoga mat"
+      ],
+      "location": "Body Studio",
+      "classSize": 15,
+      "registeredParticipants": 10,
+      "exercises": [
+        {
+          "name": "Full Body Stretch",
+          "sets": 2,
+          "duration": "30 seconds each"
+        },
+        {
+          "name": "Hamstring Stretch",
+          "sets": 2,
+          "duration": "1 minute per side"
+        },
+        {
+          "name": "Child's Pose",
+          "sets": 2,
+          "duration": "1 minute"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Nighttime Meditation",
+      "img": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ec29l133l25uw1n4jpr8.jpg",
+      "description": "Wind down and relax with a guided meditation session.",
+      "date": "2023-08-27",
+      "time": "08:00 PM",
+      "railway": "20:00",
+      "trainerName": "Paul Heyman",
+      "duration": "30 minutes",
+      "difficulty": "beginner",
+      "focus": [
+        "mindfulness"
+      ],
+      "equipment": [
+        "cushion",
+        "blanket"
+      ],
+      "location": "Body Studio",
+      "classSize": 15,
+      "registeredParticipants": 10,
+      "exercises": [
+        {
+          "name": "Guided Meditation",
+          "sets": 1,
+          "duration": "20 minutes"
+        },
+        {
+          "name": "Deep Breathing",
+          "sets": 1,
+          "duration": "10 minutes"
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john@example.com",
+      "password": "hashed_password_here",
+      "membership": {
+        "status": "active",
+        "type": "premium",
+        "expires": "2023-12-31"
+      },
+      "workouts": []
+    },
+    {
+      "name": "Jayachandran",
+      "email": "jayachandran9629040900@gmail.com",
+      "password": "007",
+      "membership": {
+        "status": "inactive",
+        "type": "none",
+        "expires": ""
+      },
+      "workouts": [],
+      "id": 2
+    }
+  ],
+  "authDetails": [
+    {
+      "isAuth": false,
+      "isData": {},
+      "id": 1,
+      "active": false
+    }
+  ]
+}

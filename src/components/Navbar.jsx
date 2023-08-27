@@ -1,5 +1,13 @@
-import React from "react";
-
+import React from 'react'
+import {
+  Drawer,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+} from '@chakra-ui/react'
 import {
   chakra,
   Box,
@@ -12,46 +20,71 @@ import {
   VStack,
   IconButton,
   CloseButton,
-  Image,
   Spacer,
   Heading,
-
+  Input,
+Stack,
+Text,
+Image,
+useToast
 } from "@chakra-ui/react";
+import Ham from "../assets/icons/Ham.png"
+import Toggle from "react-toggle"; 
 import { useNavigate } from "react-router-dom";
-import { AiOutlineMenu } from "react-icons/ai";
-
+import { useContext } from 'react';
+import { AuthContext } from '../route/AuthContext';
 import F6 from "../assets/images/F6.png"
+import { HamburgerIcon } from '@chakra-ui/icons'
+import { RxHamburgerMenu } from "react-icons/rx";
 
-export default function Navbar(){
+
+export default function Navbar() {
   const bg = useColorModeValue("black", "black");
-  const mobileNav = useDisclosure();
-const Navigate=useNavigate();
+  let Navigate=useNavigate()
+  const toast = useToast()
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const btnRef = React.useRef()
+  const { login,status,isData,logout,isActive} = useContext(AuthContext);
   return (
-    <React.Fragment>
-      <chakra.header
-        bg="black"
+    <>
+    <Box bg={"black"}>
+      <Button m={5} color={"black"} colorScheme='black' >
+   <Image mt={10} ref={btnRef}
+    onClick={onOpen} 
+    src={Ham} w={"45px"} />
+      </Button>
+      <Box  bg="black">
+      <Drawer
    
-
-        w="full"
-        px={{ base: 2, sm: 4 }}
-        py={4}
-        shadow="md"
+        isOpen={isOpen}
+        placement='top'
+        onClose={onClose}
+        finalFocusRef={btnRef}
+       border="1px solid white"
       >
-        <Flex alignItems="center" justifyContent="space-around" mx="auto" fontFamily="poppins">
-          <Flex>
-             <Image w="190px" src={F6} />
-   
-          </Flex>
-          <HStack display="flex"  alignItems="center" justifyContent="space-evenly">
-            <HStack
-              spacing={10}
+        <DrawerOverlay />
+        <DrawerContent>
+          {/* <DrawerCloseButton color={"#097FD9"} border="1px solid #097FD9" /> */}
+          <DrawerHeader bg="black"  >
+    
+          <Flex  gap={5} alignItems={"center"} justifyContent={"space-around"} direction={{base:'column',sm:'column',md:'row'}}
+            bg="black" fontFamily={"Poppins"} >
+              <Flex>
+              <Image w="190px" src={F6} />
+              </Flex>
+             
+             <Stack direction={{base:'column',sm:'column',md:'row'}}
+              spacing={{base:2,sm:2,md:10}}
               mr={1}
+              alignItems="center" justifyContent="space-evenly"
               color="white"
-              display={{ base: "none", md: "inline-flex" }}
+             
             >
-      <Button colorScheme={bg} variant='ghost'
+      <Button colorScheme={"white"} color={"white"} variant='ghost'
     fontWeight="500"
-                onClick={(e)=>{Navigate("/")}}
+                onClick={(e)=>{ 
+                  onClose() ;
+                  Navigate("/")}}
                 _hover={{
                   color: "#097FD9",
              }}
@@ -59,97 +92,83 @@ const Navigate=useNavigate();
                Home
               </Button>
               
-              <Button colorScheme={bg} variant='ghost'
+              <Button colorScheme={bg} color={"white"} variant='ghost'
          fontWeight="500"
-                onClick={(e)=>{Navigate("/program")}}
+                onClick={(e)=>{
+                   onClose() ;Navigate("/workout")}}
                 _hover={{
                   color: "#097FD9",
              }}
               >
-              Program
+            Workout
               </Button>
-              <Button colorScheme={bg} variant='ghost'
-                onClick={(e)=>{Navigate("/pricing")}}
+              {!isActive?
+              <Button colorScheme={bg} variant='ghost' color={"white"}
+                onClick={(e)=>{ onClose() ;Navigate("/pricing")}}
                 fontWeight="500"
                 _hover={{
                   color: "#097FD9",
              }}
               >
                Pricing
-              </Button>
-              <Button colorScheme={bg} variant='ghost'
-                onClick={(e)=>{Navigate("/community")}}
+              </Button> :""}
+              <Button colorScheme={bg} variant='ghost' color={"white"}
+                onClick={(e)=>{ onClose() ; Navigate("/community")}}
                fontWeight="500"
-                mr="80px"
+            
                 _hover={{
                   color: "#097FD9",
              }}
               >
                Community
               </Button>
-              <Button color="white" variant='outline' colorScheme="white" >
-           Login
-            </Button>
-            </HStack>
+            </Stack>
+             
+                     
+       
+        <HStack>
+          {status?<>
+            <Button color="white" variant='outline' colorScheme="white"   onClick={() => { onClose() ;
+         Navigate("/booked-workout")
+        }}>Booked Workouts</Button>
+           
          
             <Spacer />
-            <Button bg="#097FD9" variant='solid' colorScheme="#097FD9">
-            Register
-            </Button>
-            <Box display={{ base: "inline-flex", md: "none" }}>
-              <IconButton
-                display={{ base: "flex", md: "none" }}
-                aria-label="Open menu"
-                fontSize="20px"
-                color="white"
-                _dark={{ color: "inherit" }}
-                variant="ghost"
-                icon={<AiOutlineMenu />}
-                onClick={mobileNav.onOpen}
-              />
-
-              <VStack
-                pos="absolute"
-                top={0}
-                left={0}
-                right={0}
-                display={mobileNav.isOpen ? "flex" : "none"}
-                flexDirection="column"
-                p={2}
-                pb={4}
-                m={2}
-                bg={bg}
-               border="2px solid white"
-                spacing={3}
-                rounded="m"
-                shadow="sm"
-              >
-                <CloseButton
-                  aria-label="Close menu"
-                  onClick={mobileNav.onClose}
-                  color="white"
-                />
-
-                <Button  color="white" w="full" variant='ghost' onClick={(e)=>{Navigate("/")}}>
-                 Home
-                </Button>
-                <Button w="full"  color="white" variant="ghost" onClick={(e)=>{Navigate("/program")}}>
-                  Program
-                </Button>
-                <Button w="full"  color="white" variant="ghost" onClick={(e)=>{Navigate("/pricing")}}>
-                  Pricing
-                </Button>
-                <Button w="full"  color="white" variant="ghost" onClick={(e)=>{Navigate("/community")}}>
-                  Community
-                </Button>
-                <Button w="full"   color="white" variant="ghost">
-                  Login
-                </Button>
-              </VStack>
-            </Box>
+            <Button bg="#097FD9" variant='solid' colorScheme="#097FD9"  onClick={() => { onClose() ;
+             logout()
+             toast({
+              title: 'Logout Succesfully',
+              description: "You are logged out from our website",
+              status: 'success',
+              duration: 3000,
+              isClosable: true,
+            })
+        }}>Logout</Button>
+          </>:<>
+        <Button color="white" variant='outline' colorScheme="white"   onClick={() => { onClose() ;
+         Navigate("/login")
+        }}>Login</Button>
+           
+         
+            <Spacer />
+            <Button bg="#097FD9" variant='solid' colorScheme="#097FD9"  onClick={() => { onClose() ;
+             Navigate("/register")
+        }}>Register</Button></>
+            }
           </HStack>
+
+        
         </Flex>
-      </chakra.header>
-    </React.Fragment>
-  );
-};
+            
+          
+          </DrawerHeader>
+        
+          
+        </DrawerContent>
+      </Drawer>
+      </Box>
+      </Box>
+    </>
+  )
+}
+

@@ -14,8 +14,26 @@ import {
 
 } from "@chakra-ui/react";
 import { Fade, Slide } from "react-awesome-reveal";
+import { useContext } from "react";
+import { AuthContext } from "../route/AuthContext";
 import RF1 from "../assets/images/F3.png"
+import { useNavigate } from "react-router-dom";
+import { useToast } from '@chakra-ui/react'
+
+
 export default function Hero(){
+  let Navigate=useNavigate()
+  const { status } = useContext(AuthContext);
+  const toast = useToast()
+  function start(){
+    toast({
+      title: 'Kindly Login To Our Website.',
+      status: 'info',
+      duration: 2000,
+      isClosable: true,
+    })
+    Navigate("/login") 
+  }
   return (
     <Box bg={"Black"} >
     
@@ -66,7 +84,9 @@ export default function Hero(){
                 colorScheme="brand"
                 size="lg"
                 type="submit"
-       
+       onClick={()=>{
+status?Navigate("/workout"):start()
+       }}
               >
                 Start Training
               </Button>
