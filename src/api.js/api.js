@@ -1,6 +1,6 @@
 import axios from "axios";
 
-let url=`http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}`;
+let url=`https://seven-fit-api.onrender.com`;
 
 export function getData(){
     return axios.get(`${url}/workouts`);

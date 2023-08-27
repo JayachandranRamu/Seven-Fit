@@ -55,7 +55,19 @@ setLoading(true)
           var hours = dt.getHours(); // gives the value in 24 hours format
           var minutes = dt.getMinutes() ; 
           var finalTime =hours + ":" + minutes; 
-          if(el.railway>=finalTime){
+          function formatAMPM(date) {
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 12; // the hour '0' should be '12'
+            minutes = minutes < 10 ? '0'+minutes : minutes;
+            var strTime = hours + ':' + minutes + ' ' + ampm;
+            return strTime;
+          }
+          
+          console.log(formatAMPM(new Date));
+          if(el.time<formatAMPM(new Date)){
           //  setFlags(false)
             return <>
 <WorkoutCard key={el.id} date={name} el={el} />

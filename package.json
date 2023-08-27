@@ -25,12 +25,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "startt": "react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server --watch db.json --port 8080",
-    "start": "node server.js"
+    "server":"json-server --watch data/db.json --port 8080"
   },
   "eslintConfig": {
     "extends": [
@@ -49,18 +48,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JayachandranRamu/parched-bedroom-7723.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JayachandranRamu/parched-bedroom-7723/issues"
-  },
-  "homepage": "https://github.com/JayachandranRamu/parched-bedroom-7723#readme",
-  "description": ""
+  }
 }
