@@ -65,7 +65,7 @@ let isActive=authDetails.active
 
 useEffect(()=>{
 getAuthDetails().then(res=>setAuthDetails(res.data))
-},[flag])
+},[authDetails])
 
   return <AuthContext.Provider value={{status,isData,login,logout,activeChange,isActive,addWorkout,deleteWorkout}}>
   {children}

@@ -139,7 +139,7 @@ export default function Footer() {
          <Image w="190px" src={F6} />
         </Flex>
         <Text pt={6} fontSize={'sm'} textAlign={'center'}>
-          © 2022 Chakra Templates. All rights reserved
+     
         </Text>
       </Box>
     </Box>
