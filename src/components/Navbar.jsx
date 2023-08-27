@@ -24,24 +24,27 @@ import {
   Heading,
   Input,
 Stack,
-Image
+Text,
+Image,
+useToast
 } from "@chakra-ui/react";
 import Ham from "../assets/icons/Ham.png"
 import Toggle from "react-toggle"; 
 import { useNavigate } from "react-router-dom";
-
-
+import { useContext } from 'react';
+import { AuthContext } from '../route/AuthContext';
 import F6 from "../assets/images/F6.png"
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { RxHamburgerMenu } from "react-icons/rx";
-import Login from './Login';
-import Register from './Register';
+
+
 export default function Navbar() {
   const bg = useColorModeValue("black", "black");
   let Navigate=useNavigate()
+  const toast = useToast()
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
-
+  const { login,status,isData,logout,isActive} = useContext(AuthContext);
   return (
     <>
     <Box bg={"black"}>
@@ -92,13 +95,14 @@ export default function Navbar() {
               <Button colorScheme={bg} color={"white"} variant='ghost'
          fontWeight="500"
                 onClick={(e)=>{
-                   onClose() ;Navigate("/program")}}
+                   onClose() ;Navigate("/workout")}}
                 _hover={{
                   color: "#097FD9",
              }}
               >
             Workout
               </Button>
+              {!isActive?
               <Button colorScheme={bg} variant='ghost' color={"white"}
                 onClick={(e)=>{ onClose() ;Navigate("/pricing")}}
                 fontWeight="500"
@@ -107,7 +111,7 @@ export default function Navbar() {
              }}
               >
                Pricing
-              </Button> 
+              </Button> :""}
               <Button colorScheme={bg} variant='ghost' color={"white"}
                 onClick={(e)=>{ onClose() ; Navigate("/community")}}
                fontWeight="500"
@@ -123,12 +127,34 @@ export default function Navbar() {
                      
        
         <HStack>
-       <Login />
+          {status?<>
+            <Button color="white" variant='outline' colorScheme="white"   onClick={() => { onClose() ;
+         Navigate("/booked-workout")
+        }}>Booked Workouts</Button>
            
          
             <Spacer />
-            <Register />
-            
+            <Button bg="#097FD9" variant='solid' colorScheme="#097FD9"  onClick={() => { onClose() ;
+             logout()
+             toast({
+              title: 'Logout Succesfully',
+              description: "You are logged out from our website",
+              status: 'success',
+              duration: 3000,
+              isClosable: true,
+            })
+        }}>Logout</Button>
+          </>:<>
+        <Button color="white" variant='outline' colorScheme="white"   onClick={() => { onClose() ;
+         Navigate("/login")
+        }}>Login</Button>
+           
+         
+            <Spacer />
+            <Button bg="#097FD9" variant='solid' colorScheme="#097FD9"  onClick={() => { onClose() ;
+             Navigate("/register")
+        }}>Register</Button></>
+            }
           </HStack>
 
         
