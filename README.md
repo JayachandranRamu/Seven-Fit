@@ -6,7 +6,7 @@
 
 
 # Seven Fit
-It is basically a Luxury Gym Website, Where people can register into our website and buy a package and then they can book their workout session. It is an individual project build in a span of 5 days.
+It is basically a Luxury Gym Website, Where people can register into omy website and buy a package and then they can book their workout session and they can cancel their session ,if they want. It is an Individual project build in a span of 5 days.
 
 ## Deployment
 
