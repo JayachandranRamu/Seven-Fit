@@ -59,6 +59,7 @@ function HandleSubmit(e){
        }
        if(flag.current){
     postUserData(loginData)
+    getUserData().then(res=>setUsersData(res.data))
             toast({
                 title: 'Account Created Succesfully',
                 description: "You can login to our website",

@@ -9,6 +9,7 @@ import A3 from "../assets/images/A3.webp"
 import A4 from "../assets/images/A4.webp"
 import A5 from "../assets/images/A5.webp"
 import Trainers from '../components/Trainers';
+import Footer from '../components/Footer';
 
 
 const Community = () => {
@@ -36,6 +37,9 @@ const Community = () => {
 </Box>
 <Trainers />
 </Slide>
+</Box>
+<Box mt={20}>
+<Footer />
 </Box>
   </>
   )

@@ -54,9 +54,6 @@ export default function Footer() {
               </Tag>
             </Stack>
             <Box as="a" href={'#'}>
-              Tutorials
-            </Box>
-            <Box as="a" href={'#'}>
               Pricing
             </Box>
             <Box as="a" href={'#'}>
@@ -67,9 +64,6 @@ export default function Footer() {
             <ListHeader>Company</ListHeader>
             <Box as="a" href={'#'}>
               About Us
-            </Box>
-            <Box as="a" href={'#'}>
-              Press
             </Box>
             <Box as="a" href={'#'}>
               Careers
@@ -93,9 +87,6 @@ export default function Footer() {
               Terms of Service
             </Box>
             <Box as="a" href={'#'}>
-              Law Enforcement
-            </Box>
-            <Box as="a" href={'#'}>
               Status
             </Box>
           </Stack>
@@ -106,9 +97,6 @@ export default function Footer() {
             </Box>
             <Box as="a" href={'#'}>
               Twitter
-            </Box>
-            <Box as="a" href={'#'}>
-              Dribbble
             </Box>
             <Box as="a" href={'#'}>
               Instagram
@@ -139,7 +127,7 @@ export default function Footer() {
          <Image w="190px" src={F6} />
         </Flex>
         <Text pt={6} fontSize={'sm'} textAlign={'center'}>
-          © 2022 Chakra Templates. All rights reserved
+     
         </Text>
       </Box>
     </Box>
