@@ -89,7 +89,7 @@ You can do your payment here.
 #### Workout Data
 
 ```http 
-https://seven-fit-api.onrender.com/workouts
+GET https://seven-fit-api.onrender.com/workouts
 ```
 
 
